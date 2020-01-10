@@ -20,3 +20,7 @@ echo 'Need on: <br>';
 for($i = 0; $i < $opilaste_arv; $i++){
     echo $vso19[$i].'<br>';
 }
+echo '<hr>';
+foreach ($vso19 as $opilane){
+    echo $opilane.'<br>';
+}
