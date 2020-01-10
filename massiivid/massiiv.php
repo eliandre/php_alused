@@ -75,3 +75,5 @@ foreach ($opilased as $opilane){
     };
     echo '<br>';
 }
+echo '<br>';
+echo $opilased[1]['perenimi'];
