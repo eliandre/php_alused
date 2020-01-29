@@ -29,3 +29,10 @@ echo strtotime("next Friday").'<br>';
 echo strtotime("5pm + 6 Hours").'<br>';
 echo strtotime("6am 10 days ago").'<br>';
 
+//kuupäeva valideerimine
+if(checkdate(12,32,2013)){
+    echo ('Kuupäev korras');
+}
+else {
+    echo ('Kuupäev on valesti sisestatud');
+}
