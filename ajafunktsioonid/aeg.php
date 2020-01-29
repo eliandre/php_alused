@@ -14,3 +14,18 @@ $kuu = $eesti_kuud[date('n')];
 $aasta = date('Y');
 //kuupäeva väljastamine
 echo $paev.'. '.$kuu.' '.$aasta.'<br><br>';
+
+mktime(tunnid, minutid, sekundid, kuu, päev, aasta, suveaeg);
+$sp = mktime(0,0,0,10,29,1969);
+echo date('d.m.Y', $sp);
+echo '<br><br>';
+echo date('d.m.Y G:i' , time()+60).'<br><br>';
+echo date('d.m.Y G:i' , time()+60*60*24).'<br><br';
+
+echo strtotime("tomorrow").'<br>';
+echo strtotime("10 september 2000").'<br>';
+echo strtotime("+1 week").'<br>';
+echo strtotime("next Friday").'<br>';
+echo strtotime("5pm + 6 Hours").'<br>';
+echo strtotime("6am 10 days ago").'<br>';
+
