@@ -1,4 +1,35 @@
 <?php
+// kood tervitab nimepidi ja nimi on esisuurtähega
+$nimi = $_GET['nimi'];
+$nimi = strtolower($nimi);
+$nimi = ucfirst($nimi);
+echo 'Tere, '.$nimi.'!<hr>';
+
+// pane tähtede vahele punkt
+$sisend = $_GET['sisend'];
+for($i = 0; $i < strlen($sisend); $i++){
+    $taht = strtoupper($sisend[$i]);
+    echo $taht.'.';
+}
+echo '<hr>';
+
+// eemaldatakse ebasobivad sõnad
+$ropp = array('noob', 'kurat');
+$lause = $_GET['lause'];
+$lause = strtolower($lause);
+foreach($ropp as $roppSona){
+    $asendus = '';
+    for($i = 0; $i < strlen($roppSona); $i++){
+        $asendus .= '*';
+    }
+    $asendus .= ' ';
+
+    $roppSonaIndex = strpos($lause, $roppSona, 0);
+    if($roppSonaIndex !== false){
+        $lause = substr_replace($lause, $asendus, $roppSonaIndex, strlen($ropp));
+    }
+}
+
 
 // teeme tagasi lause algava suure tähega
 $lause = ucfirst($lause);
