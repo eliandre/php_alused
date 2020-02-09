@@ -22,11 +22,10 @@ foreach($ropp as $roppSona){
     for($i = 0; $i < strlen($roppSona); $i++){
         $asendus .= '*';
     }
-    $asendus .= ' ';
 
     $roppSonaIndex = strpos($lause, $roppSona, 0);
     if($roppSonaIndex !== false){
-        $lause = substr_replace($lause, $asendus, $roppSonaIndex, strlen($ropp));
+        $lause = substr_replace($lause, $asendus, $roppSonaIndex, strlen($roppSona));
     }
 }
 
