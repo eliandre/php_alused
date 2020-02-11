@@ -12,3 +12,9 @@ for($i = 0; $i < $suurus; $i++){
 }
 
 fclose($minu_fail);
+echo '<hr>';
+
+// faili sisu ühendamine
+$nimed = array('jyri', 'mari', 'juhan', 'kr66t', 'gusta');
+$emailid = implode(", ", $nimed);
+echo $emailid;
